@@ -22,16 +22,16 @@
       overflow-x: hidden;
       line-height: 1.6;
     }
-    /* Fixed Top Navigation Bar */
+    /* Fixed Top Navigation Bar (Table of Contents) */
     #toc {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(20,20,20,0.9);
+      background: rgba(20, 20, 20, 0.9);
       padding: 15px 0;
       z-index: 10;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(8px);
     }
     #toc ul {
@@ -55,7 +55,7 @@
     }
     #toc a:hover {
       color: #00ccff;
-      text-shadow: 0 0 5px rgba(0,204,255,0.8);
+      text-shadow: 0 0 5px rgba(0, 204, 255, 0.8);
     }
     /* Hero Section */
     #hero {
@@ -82,10 +82,10 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      background: rgba(20,20,20,0.7);
+      background: rgba(20, 20, 20, 0.7);
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(8px);
       max-width: 900px;
     }
@@ -93,13 +93,13 @@
       max-width: 200px;
       border-radius: 50%;
       margin-right: 30px;
-      filter: drop-shadow(0 0 15px rgba(255,255,255,0.2));
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
     }
     #typed-text {
       font-size: 2rem;
       color: #ffffff;
       white-space: pre-wrap;
-      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     }
     /* Content Sections */
     .content {
@@ -129,7 +129,7 @@
       justify-content: center;
       max-width: 1200px;
       margin: 40px auto;
-      background: rgba(20,20,20,0.9);
+      background: rgba(20, 20, 20, 0.9);
       border-radius: 8px;
       padding: 20px;
       text-align: left;
@@ -161,7 +161,7 @@
       display: block;
       margin: 0 auto 15px;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     }
     .project-image img:last-child {
       margin-bottom: 0;
@@ -174,6 +174,18 @@
         flex: 1 1 100%;
         text-align: center;
       }
+    }
+    /* Center Designing B.R.U.N.O and Specifications Sections */
+    #designing-bruno .project-text,
+    #bruno-specifications .project-text {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+    #designing-bruno .report-section ul {
+      list-style: disc;
+      padding-left: 0;
+      display: inline-block;
+      text-align: left;
     }
     /* Experience Section */
     #experience {
@@ -226,7 +238,7 @@
     .experience-image img {
       max-width: 100%;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     }
     @media (max-width: 768px) {
       .experience-layout {
@@ -262,39 +274,7 @@
     }
     #contact a:hover {
       color: #00ccff;
-      text-shadow: 0 0 5px rgba(0,204,255,0.8);
-    }
-    /* Resume Download Button */
-    .resume-download {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-      position: relative;
-    }
-    .resume-button {
-      background: #00ccff;
-      color: #0a0a0a;
-      padding: 12px 20px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: background 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 4px 10px rgba(0,204,255,0.5);
-    }
-    .resume-button:hover {
-      background: #0099cc;
-      transform: scale(1.05);
-    }
-    .rocket-animation {
-      position: absolute;
-      font-size: 2rem;
-      opacity: 0;
-      bottom: -30px;
-      transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+      text-shadow: 0 0 5px rgba(0, 204, 255, 0.8);
     }
     /* Footer */
     footer {
@@ -305,10 +285,108 @@
       font-size: 0.9rem;
       letter-spacing: 1px;
     }
+    /* Specs Table Styling */
+    .specs-container {
+      margin-top: 20px;
+    }
+    .specs-table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      color: #d3d3d3;
+      margin-bottom: 20px;
+    }
+    .specs-table th, .specs-table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .specs-table th {
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    /* Rocket Button Styling */
+    .rocket-button {
+      position: relative;
+      display: inline-block;
+      padding: 12px 24px;
+      background: #00ccff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .rocket-button:hover {
+      transform: scale(1.05);
+    }
+    .rocket {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      animation: none;
+    }
+    .rocket.launch {
+      animation: rocketLaunch 1s ease-out forwards;
+    }
+    @keyframes rocketLaunch {
+      0% { bottom: -20px; opacity: 1; }
+      100% { bottom: 100%; opacity: 0; }
+    }
+    /* Schematics Gallery Styling */
+    .schematics-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .schematics-gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    }
+    /* Report Section Styling */
+    .report-section {
+      margin-bottom: 30px;
+    }
+    .report-section h3 {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-bottom: 15px;
+      text-transform: none;
+      letter-spacing: 1px;
+    }
+    .report-section p {
+      font-size: 1.1rem;
+      color: #d3d3d3;
+      margin-bottom: 15px;
+    }
+    .report-section ul {
+      list-style: disc;
+      padding-left: 20px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      color: #d3d3d3;
+    }
+    .report-section li {
+      margin-bottom: 10px;
+    }
+    .report-section strong {
+      color: #ffffff;
+    }
   </style>
 </head>
 <body>
-  <!-- Fixed Top Navigation Bar -->
+  <!-- Fixed Top Navigation Bar (Table of Contents) -->
   <nav id="toc">
     <ul>
       <li><a href="#about">About Me</a></li>
@@ -317,6 +395,7 @@
       <li><a href="#contact">Contact Me</a></li>
     </ul>
   </nav>
+
   <!-- Hero Section -->
   <section id="hero">
     <div class="intro-container">
@@ -324,6 +403,7 @@
       <div id="typed-text"></div>
     </div>
   </section>
+
   <!-- About Me Section -->
   <section id="about" class="content">
     <h2>About Me</h2>
@@ -333,6 +413,7 @@
       <strong>Location:</strong> Mission, Texas
     </p>
   </section>
+
   <!-- Experience Section -->
   <section id="experience">
     <div class="experience-layout">
@@ -351,9 +432,11 @@
       </div>
     </div>
   </section>
+
   <!-- Projects Section -->
   <section id="projects" class="content">
     <h2>Projects</h2>
+
     <!-- Project 1 -->
     <div class="project-layout">
       <div class="project-text">
@@ -366,10 +449,11 @@
         <!-- No images for Project 1 -->
       </div>
     </div>
+
     <!-- Project 2 -->
     <div class="project-layout">
       <div class="project-text">
-        <h2>B.R.U.N.O Avionics computer</h2>
+        <h2>B.R.U.N.O Avionics Computer</h2>
         <p>
           B.R.U.N.O Avionics computer is engineered as the central nervous system for advanced aerospace vehicles. With its compact 5x3 inch form factor, dual-microcontroller architecture, high I/O capability, and integrated GPS/LoRa communications, B.R.U.N.O delivers precise real-time data and control for flight-critical applications. Our mission is to provide a robust, scalable platform that meets the rigorous demands of both commercial and experimental flight.
         </p>
@@ -379,10 +463,114 @@
         <img src="Images_Portfolio/B.R.U.N.O_Layout.png" alt="B.R.U.N.O Layout" />
       </div>
     </div>
+
+    <!-- B.R.U.N.O Specifications -->
+    <div class="project-layout" id="bruno-specifications">
+      <div class="project-text">
+        <h2>B.R.U.N.O Specifications</h2>
+        <div class="specs-container">
+          <h3>Technical Specifications</h3>
+          <table class="specs-table">
+            <tr><th>Feature</th><th>Specification</th></tr>
+            <tr><td>Processor</td><td>Dual-MCU System (ESP32 + STM32)</td></tr>
+            <tr><td>Connectivity</td><td>LoRa, GPS, I2C, SPI, UART</td></tr>
+            <tr><td>Power Input</td><td>USB-C PD (12V, 3A)</td></tr>
+            <tr><td>Dimensions</td><td>5x3 inches</td></tr>
+            <tr><td>PCB Layers</td><td>4-Layer, Impedance Controlled</td></tr>
+          </table>
+          <h3>System Schematics & Layout</h3>
+          <!-- Images removed from this section -->
+        </div>
+      </div>
+      <div class="project-image">
+        <!-- No additional images here -->
+      </div>
+    </div>
+
+    <!-- Designing B.R.U.N.O -->
+    <div class="project-layout" id="designing-bruno">
+      <div class="project-text">
+        <h2>Designing B.R.U.N.O</h2>
+        <p>Below is a draft technical report structured to highlight my design approach, engineering decisions, and future roadmap.</p>
+        <div class="report-section">
+          <h3>1. Project Overview</h3>
+          <p><strong>What is B.R.U.N.O?</strong></p>
+          <p>B.R.U.N.O is an avionics computer aimed at reimagining and uplifting avionics systems used in rocketry. It was named as a tribute to an industry tradition I encountered at Amazon Kuiper Systems, where avionics computers were named after the designer's dog.</p>
+          <p><strong>Problem Statement & Significance</strong></p>
+          <ul>
+            <li>Previous systems suffered from limited expandability and poor signal integrity.</li>
+            <li>Inadequate power sourcing and lack of redundancy compromised telemetry during critical phases.</li>
+            <li>B.R.U.N.O resolves these issues with higher power handling, dual-microcontroller redundancy, and expanded sensor integration.</li>
+          </ul>
+        </div>
+        <div class="report-section">
+          <h3>2. System Architecture & Design</h3>
+          <p><strong>Core Components</strong></p>
+          <ul>
+            <li><strong>Power Subsystem:</strong> Utilizes a buck-boost converter for stable 5V power and an LDO for 3.3V regulation.</li>
+            <li><strong>Processing Units:</strong> STM32F5 handles navigation, while STM32H7 executes flight control algorithms.</li>
+            <li><strong>Sensor Suite:</strong> Includes IMU, magnetometer, temperature, and absolute pressure sensors.</li>
+          </ul>
+          <h3>Design Principles & Standards</h3>
+          <ul>
+            <li>Redundant B.R.U.N.O units ensure system integrity via UART heartbeat communication.</li>
+            <li>RF design follows 50-ohm impedance matching principles to reduce noise.</li>
+            <li>Thermal management includes bypass capacitors and TVS diodes for electrostatic discharge protection.</li>
+          </ul>
+        </div>
+        <div class="report-section">
+          <h3>3. Power & Communication Systems</h3>
+          <p><strong>Power Strategy</strong></p>
+          <ul>
+            <li>Battery system supports up to 26V input.</li>
+            <li>High-efficiency buck-boost converter achieves ≈90% efficiency.</li>
+          </ul>
+          <p><strong>Communication Protocols</strong></p>
+          <ul>
+            <li>UART for inter-microcontroller communication.</li>
+            <li>SPI for high-speed LoRa transmission.</li>
+            <li>I2C for low-speed sensor interfacing.</li>
+          </ul>
+        </div>
+        <div class="report-section">
+          <h3>4. Sensors & Actuators</h3>
+          <p><strong>Sensor Calibration & Testing</strong></p>
+          <ul>
+            <li>IMU and magnetometer used for real-time navigation.</li>
+            <li>Pressure sensor calibration achieved using MATLAB scripts and a reference PSI tool.</li>
+            <li>Automated servo actuation at 100 PSI confirms apogee detection.</li>
+          </ul>
+        </div>
+        <div class="report-section">
+          <h3>5. Testing & Validation</h3>
+          <p>Ongoing tests include:</p>
+          <ul>
+            <li>Bench testing of power regulators and signal integrity.</li>
+            <li>Environmental testing with simulated temperature cycling and vibrations.</li>
+          </ul>
+        </div>
+        <div class="report-section">
+          <h3>6. Future Roadmap</h3>
+          <ul>
+            <li>Integration of real-time operating system (RTOS) for enhanced data processing.</li>
+            <li>Development of a multi-board PCBA stack-up with dedicated Power Management (PMAD) and Relay Boards.</li>
+            <li>Full alignment with aerospace standards (RTCA DO-254, MIL-STD-461).</li>
+          </ul>
+        </div>
+        <div class="report-section">
+          <h3>7. Conclusion</h3>
+          <p>B.R.U.N.O is a significant leap forward in avionics design, incorporating real-time flight control, redundancy, and aerospace-grade fault tolerance. With planned software and hardware upgrades, this project has the potential to set a new benchmark in rocketry avionics.</p>
+        </div>
+      </div>
+      <div class="project-image">
+        <!-- No images here as requested -->
+      </div>
+    </div>
+
     <!-- Project 3 -->
     <div class="project-layout">
       <div class="project-text">
-        <h2>J.A.X.O.N motor and servo AI Driver</h2>
+        <h2>J.A.X.O.N Motor and Servo AI Driver</h2>
         <p>
           J.A.X.O.N motor and servo AI Driver is an ultra-low cost, high-performance control system leveraging the ESP32 to deliver precise motor and servo control. Utilizing encoder data and powered by a USB-C PD IC for streamlined power management, J.A.X.O.N offers versatile connectivity via serial and I2C—enabling seamless integration with edge AI modules like the Jetson Nano. Built from readily available modules, this innovative solution combines autonomous control capabilities with advanced communication for cutting-edge applications.
         </p>
@@ -393,23 +581,63 @@
       </div>
     </div>
   </section>
+
   <!-- Contact Me Section -->
   <section id="contact" class="content">
     <h2>Contact Me</h2>
+    <p>
+      <button id="downloadResume" class="rocket-button">
+        Download My Resume
+        <span class="rocket">🚀</span>
+      </button>
+    </p>
     <p>Email: <a href="mailto:axel@frocher.com">axel@frocher.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/axel-rocha-hernandez/" target="_blank">linkedin.com/in/axel-rocha-hernandez/</a></p>
     <p>Phone: <a href="tel:+19566000895">+1 956 600 0895</a></p>
-    <div class="resume-download">
-      <a href="Resum_Fall_Spring25_Revised.pdf" download="Axel_Rocha_Resume.pdf" class="resume-button">
-        🚀 Download My Resume
-      </a>
-      <div class="rocket-animation" id="rocket">🚀</div>
-    </div>
   </section>
+
   <footer>
     <p>© 2025 Axel Rocha Hernandez. All Rights Reserved.</p>
   </footer>
+
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script>
+    // Three.js setup for rotating Earth in the hero section
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('hero').appendChild(renderer.domElement);
+
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(5, 3, 5);
+    scene.add(directionalLight);
+
+    const geometry = new THREE.SphereGeometry(5, 64, 64);
+    const textureLoader = new THREE.TextureLoader();
+    const earthTexture = textureLoader.load('https://threejsfundamentals.org/threejs/resources/images/earth-day.jpg');
+    const material = new THREE.MeshPhongMaterial({ map: earthTexture });
+    const earth = new THREE.Mesh(geometry, material);
+    scene.add(earth);
+
+    camera.position.z = 10;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      earth.rotation.y += 0.0015;
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
     // Typewriter Effect for Hero Section
     const typedText = "Axel Rocha Hernandez";
     let typedIndex = 0;
@@ -422,16 +650,26 @@
       }
     }
     setTimeout(type, 300);
-    // Rocket Animation using JavaScript on click event for Resume Button
-    const resumeButton = document.querySelector('.resume-button');
-    const rocket = document.getElementById('rocket');
-    resumeButton.addEventListener('click', function() {
-      rocket.style.opacity = '1';
-      rocket.style.transform = 'translateY(-100px)';
+
+    // Rocket Animation for Resume Download
+    const downloadButton = document.getElementById('downloadResume');
+    const rocket = downloadButton.querySelector('.rocket');
+
+    downloadButton.addEventListener('click', () => {
+      // Trigger rocket animation
+      rocket.classList.add('launch');
+
+      // Remove animation class after it completes and download file
       setTimeout(() => {
-        rocket.style.opacity = '0';
-        rocket.style.transform = 'translateY(0)';
-      }, 1000);
+        rocket.classList.remove('launch');
+        // Create temporary link for download
+        const link = document.createElement('a');
+        link.href = 'Resum_Fall_Spring25_Revised.pdf';
+        link.download = 'Axel_Rocha_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 1000); // Match animation duration
     });
   </script>
 </body>
